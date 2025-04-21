@@ -1,0 +1,10 @@
+header{
+    border: solid;
+}
+
+.header-logo-main-container{
+    border: solid;
+}
+.header-logo-main-container img{
+    width: 10%;
+}
