@@ -1,7 +1,7 @@
-const Image = ({ src, onClick, className , alt}) => {
+const Image = ({ src, onClick, className, alt }) => {
     return (
-        <img src={src} onClick={onClick} className={className} alt={alt}/>
+        <img src={src} onClick={onClick} className={className} alt={alt} />
     )
 }
 
-export default Image;
+export default Image; 
