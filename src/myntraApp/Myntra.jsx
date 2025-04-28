@@ -1,3 +1,4 @@
+import Footer from "./footer/Footer";
 import Header from "./header/Header";
 import LuxeGrand from "./luxeGrand/LuxeGrand";
 import MedalWorthy from "./medalWorthy/MedalWorthy";
@@ -14,6 +15,7 @@ const Myntra = () => {
             <LuxeGrand />
             <MedalWorthy />
             <ShopByCatagory />
+            <Footer />
         </>
     )
 }
