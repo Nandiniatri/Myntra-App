@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 const usePagination = (url, itemsPerPage = 5) => {
     const [paginationData, setPaginationData] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
-    console.log(currentPage);
 
     const fetchPaginationData = async () => {
         const response = await fetch(url);
@@ -16,7 +15,6 @@ const usePagination = (url, itemsPerPage = 5) => {
     }, [url])
 
     const totalPage = Math.ceil(paginationData.length / itemsPerPage);
-    console.log(totalPage);
 
 
     useEffect(() => {

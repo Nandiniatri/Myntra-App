@@ -6,13 +6,19 @@ const AllDataContextProvider = ({ children }) => {
     const [logo , setLogo] = useState([]);
     const [headerCenterData, setHeaderCenterData] = useState([]);
     const [myntraSlider , setMyntraSlider] = useState([]);
+    const [shopByCatagory , setShopByCatagory] = useState([]);
 
+
+    const fetchShopByCatagoryApi = async() => {
+        const response = await fetch('/data/shopByCategory.json');
+        const result = await response.json();
+        setShopByCatagory(result);
+    }
 
     //myntra slider
     const fetchMyntraSliderApi = async() => {
         const response = await fetch('/data/myntraSliderData.json');
         const result = await response.json();
-        console.log(result);
         setMyntraSlider(result);
     }
 
@@ -34,13 +40,15 @@ const AllDataContextProvider = ({ children }) => {
         fetchApiForMyntraLogo();
         fetchApiForHeaderCenter();
         fetchMyntraSliderApi();
+        fetchShopByCatagoryApi();
     }, [])
 
     return (
         <AllDataContext.Provider value={{
             logo,
             headerCenterData,
-            myntraSlider
+            myntraSlider,
+            shopByCatagory
         }}>
             {children}
         </AllDataContext.Provider>

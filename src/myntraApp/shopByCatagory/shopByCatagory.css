@@ -1,0 +1,32 @@
+.shopByCategory-main-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto; 
+}
+
+.shopByCategory-image-div {
+    display: flex;                
+    flex-wrap: wrap;              
+    gap: 15px;                    
+    justify-content: center;     
+    margin: 0 auto;              
+}
+
+
+.shopByCategory-image-div div {
+    width: calc(20% - 12px);       
+    display: flex;
+    justify-content: center;       
+    align-items: center;           
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.shopByCategory-image-div img {
+    width: 95%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
