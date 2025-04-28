@@ -5,7 +5,6 @@ const usePagination = (url, itemsPerPage = 5) => {
     const [currentPage, setCurrentPage] = useState(1);
     console.log(currentPage);
 
-
     const fetchPaginationData = async () => {
         const response = await fetch(url);
         const result = await response.json();

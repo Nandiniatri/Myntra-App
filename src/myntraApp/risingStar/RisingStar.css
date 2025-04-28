@@ -1,0 +1,32 @@
+.rising-star-main-container {
+    /* border: solid; */
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+}
+
+.rising-star-carousel {
+    /* border: solid red; */
+    display: flex;
+    flex-direction: row;
+
+}
+
+.rising-star-carousel img {
+    /* border: solid; */
+    width: 19.7%;
+}
+
+.rising-star-text {
+    /* border: solid; */
+    padding: 30px;
+}
+
+.rising-text-h4 {
+    text-transform: uppercase;
+    color: #3e4152;
+    letter-spacing: .15em;
+    font-size: 1.8em;
+    max-height: 5em;
+    font-weight: 700;
+}

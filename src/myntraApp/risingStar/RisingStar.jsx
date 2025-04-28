@@ -1,28 +1,30 @@
 import usePagination from "../../customHook/usePagination";
 import useTextBanner from "../../customHook/useTextBanner";
+import './RisingStar.css';
+import Image from "../../components/Image";
 
 const RisingStar = () => {
     const { textData } = useTextBanner('/data/textBannerFile/risingStarText.json');
     const { currentPageData } = usePagination('/data/risingStar.json', 5);
 
     return (
-        <>
-            <div>
-                {textData.map((item,) => (
+        <div className="rising-star-main-container">
+            <div className="rising-star-text">
+                {textData.map((item) => (
                     <div key={item.id}>
-                        <h4>{item.title}</h4>
+                        <h4 className="rising-text-h4">{item.title}</h4>
                     </div>
                 ))}
             </div>
 
-            <div>
+            <div className="rising-star-carousel">
                 {currentPageData.map((itm) => {
                     return (
-                        <img src={itm.image} />
+                        <Image src={itm.image} />
                     )
                 })}
             </div>
-        </>
+        </div>
     )
 }
 
