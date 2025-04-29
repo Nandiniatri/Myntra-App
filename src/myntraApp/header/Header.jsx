@@ -5,7 +5,7 @@ import Input from "../../components/Input";
 import { CiUser } from "react-icons/ci";
 import { CiHeart } from "react-icons/ci";
 import { BsHandbag } from "react-icons/bs";
-import './header.css';
+import './Header.css';
 
 const Header = () => {
     const { headerCenterData, logo } = useContext(AllDataContext);
