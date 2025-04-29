@@ -10,8 +10,6 @@ const ShopPage = () => {
             try {
                 const response = await fetch(`/data/headerHoverData/${category}.json`);
                 const result = await response.json();
-                console.log(result);
-
                 setData(result);
             } catch (err) {
                 console.error("Error loading data", err);
@@ -19,24 +17,23 @@ const ShopPage = () => {
         };
 
         fetchData();
-    }, []);
+    }, [category]);
 
     return (
         <div>
-            <ul>
-                {data.map((item) => (
-                    <ul>
-                        <h3>{item.title}</h3>
-                        {item.subtitle.map((subItem) => {
-                            return (
-                                <li>
-                                    <span>{subItem.title}</span>
-                                </li>
-                            )
-                        })}
-                    </ul>
-                ))}
-            </ul>
+            {data.map((item, index) => (
+                <div key={index}>
+                    <h3>{item.title}</h3>
+
+                    {item.subtitle && (
+                        <ul>
+                            {item.subtitle.map((sub) => (
+                                sub.title && <li key={sub.id}>{sub.title}</li>
+                            ))}
+                        </ul>
+                    )}
+                </div>
+            ))}
         </div>
     );
 };

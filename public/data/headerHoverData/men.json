@@ -2,6 +2,7 @@
     {
         "id":1,
         "title":"Topwear",
+        "color":"#EF5350",
         "subtitle":[
             {"id":1,"title":"T-shirts"},
             {"id":2,"title":"Causel Shirts"},
@@ -14,6 +15,7 @@
     {
         "id":2,
         "title":"Bottomwear",
+        "color":"#EF5350",
         "subtitle":[
             {"id":1,"title":"Jeans"},
             {"id":2,"title":"Causel Trousers"},
@@ -25,11 +27,81 @@
     {
         "id":3,
         "title":"Indian & Festive Wear",
+        "color":"#EF5350",
         "subtitle":[
             {"id":1,"title":"Kurta & Kurta Sets"},
             {"id":2,"title":"Sherwanis"},
             {"id":3,"title":"Nehra Jackets"},
             {"id":4,"title":"Dhotis"}
+        ]
+    },
+    {
+        "id":4,
+        "title":"Innerwear & Sleepwear",
+        "color":"#EF5350",
+        "subtitle":[
+            {"id":1,"title":""},
+            {"id":2,"title":""},
+            {"id":3,"title":""},
+            {"id":4,"title":""}
+        ]
+    },
+    {
+        "id":5,
+        "title":"Innerwear & Sleepwear",
+        "color":"#EF5350",
+        "subtitle":[
+            {"id":1,"title":"Briefs & Trunks"},
+            {"id":2,"title":"Boxers"},
+            {"id":3,"title":"Vests"},
+            {"id":4,"title":"Sleepwear & Loungewear"},
+            {"id":5,"title":"Thermals"}
+        ]
+    },
+    {
+        "id":6,
+        "title":"Innerwear & Sleepwear",
+        "color":"#EF5350"
+    },
+    {
+        "id":7,
+        "title":"Footwear",
+        "color":"#EF5350",
+        "subtitle":[
+            {"id":1,"title":"Causel Shoes"},
+            {"id":2,"title":"Sports Short"},
+            {"id":3,"title":"Formal Shoes"},
+            {"id":4,"title":"Sneakers"},
+            {"id":5,"title":"Sandals & Floaters"},
+            {"id":6,"title":"Flip Flops"},
+            {"id":7,"title":"Socks"}
+        ]
+    },
+    {
+        "id":8,
+        "title":"Personal Care & Groomming",
+        "color":"#EF5350"
+    },
+    {
+        "id":9,
+        "title":"Sunglassess & Frames",
+        "color":"#EF5350"
+    },
+    {
+        "id":10,
+        "title":"Watches",
+        "color":"#EF5350"
+    },
+    {
+        "id":7,
+        "title":"Sports & Activewear",
+        "color":"#EF5350",
+        "subtitle":[
+            {"id":1,"title":"Sports Shoes"},
+            {"id":2,"title":"Sports Sandals"},
+            {"id":3,"title":"Active T-Shirts"},
+            {"id":4,"title":"Sports Accessaries"},
+            {"id":5,"title":"Swimwear"}
         ]
     }
 ]
