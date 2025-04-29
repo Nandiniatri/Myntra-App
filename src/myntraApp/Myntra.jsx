@@ -4,12 +4,19 @@ import LuxeGrand from "./luxeGrand/LuxeGrand";
 import MedalWorthy from "./medalWorthy/MedalWorthy";
 import RisingStar from "./risingStar/RisingStar";
 import ShopByCatagory from "./shopByCatagory/ShortByCatagory";
+import ShopPage from "./shopPage/ShopPage";
 import MyntraSlider from "./slider/MyntraSlider";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 const Myntra = () => {
     return (
         <>
-            <Header />
+            <BrowserRouter>
+                <Header />
+                <Routes>
+                    <Route path="/shop/:category" element={<ShopPage />} />
+                </Routes>
+            </BrowserRouter>
             <MyntraSlider />
             <RisingStar />
             <LuxeGrand />

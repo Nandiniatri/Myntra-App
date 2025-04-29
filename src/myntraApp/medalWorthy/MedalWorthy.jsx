@@ -19,7 +19,7 @@ const MedalWorthy = () => {
             <div className="rising-star-carousel">
                 {currentPageData.map((itm) => {
                     return (
-                        <Image src={itm.image} />
+                        <Image src={itm.image} key={itm.id} />
                     )
                 })}
             </div>
