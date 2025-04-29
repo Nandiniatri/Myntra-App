@@ -1,4 +1,5 @@
 import Men from "../Men/men";
+import Women from "../Women/Women";
 import Footer from "./footer/Footer";
 import Header from "./header/Header";
 import LuxeGrand from "./luxeGrand/LuxeGrand";
@@ -29,6 +30,7 @@ const Myntra = () => {
                     }
                 />
                 <Route path="/shop/men" element={<Men />} />
+                <Route path="/shop/women" element={<Women />} />
             </Routes>
             <Footer />
         </BrowserRouter>

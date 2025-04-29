@@ -1,13 +1,11 @@
 import CatagoryToBag from "../resuableComp/categoriesToBag/CategoriesToBag";
-import TextBanner from "../resuableComp/textbanner/TextBanner";
 import TopBrandGrid from "../resuableComp/topBrand/TopBrand";
-import MenSlider from "./menSlider/MenSlider";
+import WomenSlider from "./womenSlider/womenSlider";
 
-const Men = () => {
+const Women = () => {
     return (
         <div>
-            <MenSlider />
-            <TextBanner url="" />
+            <WomenSlider />
             <TopBrandGrid url='/data/shopData/Men/topBrandFile/TopBrand.json' />
             <CatagoryToBag url='/data/shopData/Men/catagoriesToBagFile/CatagoryTobag.json' />
             <CatagoryToBag url="/data/shopData/Men/exploreTopBrandsFile/ExploreTopBrands.json" />
@@ -20,4 +18,4 @@ const Men = () => {
     )
 }
 
-export default Men;
+export default Women;
