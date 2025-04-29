@@ -10,3 +10,14 @@
     height: auto;
     object-fit: cover;
 }
+.brandText{
+    padding: 20px;
+}
+.brandText h4{
+    text-transform: uppercase;
+    color: #3e4152;
+    letter-spacing: .15em;
+    font-size: 1.8em;
+    max-height: 5em;
+    font-weight: 700;
+}

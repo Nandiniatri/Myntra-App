@@ -1,14 +1,15 @@
 import useTopBrands from "../../customHook/useTopBrands";
-import TextBanner from "../textbanner/TextBanner";
 import './CategoriesToBag.css';
 
-const CatagoryToBag = ({ url }) => {
+const CatagoryToBag = ({ url, title }) => {
     const { topBrand } = useTopBrands(url);
 
     return (
         <div className="category-main-conatiner">
-            <TextBanner url={url} />
-            
+            <div className="category-title-div">
+                <h4>{title}</h4>
+            </div>
+
             <div className="category-list">
                 {topBrand.map((cat) => (
                     <div key={cat.id} className="category-item">
@@ -21,4 +22,4 @@ const CatagoryToBag = ({ url }) => {
     )
 }
 
-export default CatagoryToBag;
+export default CatagoryToBag; 
