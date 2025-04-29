@@ -1,3 +1,4 @@
+import Men from "../Men/men";
 import Footer from "./footer/Footer";
 import Header from "./header/Header";
 import LuxeGrand from "./luxeGrand/LuxeGrand";
@@ -10,21 +11,27 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 const Myntra = () => {
     return (
-        <>
-            <BrowserRouter>
-                <Header />
-                <Routes>
-                    <Route path="/shop/:category" element={<ShopPage />} />
-                </Routes>
-            </BrowserRouter>
-            <MyntraSlider />
-            <RisingStar />
-            <LuxeGrand />
-            <MedalWorthy />
-            <ShopByCatagory />
-            <Footer />
-        </>
-    )
-}
+        <BrowserRouter>
+            <Header />
+
+            <Routes>
+                <Route
+                    path="/"
+                    element={
+                        <>
+                            <MyntraSlider />
+                            <RisingStar />
+                            <LuxeGrand />
+                            <MedalWorthy />
+                            <ShopByCatagory />
+                            <Footer />
+                        </>
+                    }
+                />
+                <Route path="/shop/men" element={<Men />} />
+            </Routes>
+        </BrowserRouter>
+    );
+};
 
 export default Myntra;

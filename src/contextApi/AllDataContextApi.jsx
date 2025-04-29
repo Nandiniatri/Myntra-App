@@ -7,6 +7,7 @@ const AllDataContextProvider = ({ children }) => {
     const [headerCenterData, setHeaderCenterData] = useState([]);
     const [myntraSlider, setMyntraSlider] = useState([]);
     const [shopByCatagory, setShopByCatagory] = useState([]);
+    const [isHover, setIsHover] = useState(null);
 
     //this is shop by category data api
     const fetchShopByCatagoryApi = async () => {
@@ -48,7 +49,8 @@ const AllDataContextProvider = ({ children }) => {
             logo,
             headerCenterData,
             myntraSlider,
-            shopByCatagory
+            shopByCatagory,
+            isHover, setIsHover
         }}>
             {children}
         </AllDataContext.Provider>

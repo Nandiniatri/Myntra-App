@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 
 const ShopPage = () => {
     const { category } = useParams();
@@ -21,19 +21,9 @@ const ShopPage = () => {
 
     return (
         <div>
-            {data.map((item, index) => (
-                <div key={index}>
-                    <h3>{item.title}</h3>
-
-                    {item.subtitle && (
-                        <ul>
-                            {item.subtitle.map((sub) => (
-                                sub.title && <li key={sub.id}>{sub.title}</li>
-                            ))}
-                        </ul>
-                    )}
-                </div>
-            ))}
+            <div>
+                
+            </div>
         </div>
     );
 };

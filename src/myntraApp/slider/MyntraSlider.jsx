@@ -31,14 +31,6 @@ const imges = [
 const MyntraSlider = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
 
-    // const handlePrev = () => {
-    //     setCurrentIndex(prevImg => (prevImg - 1 + imges.length) % imges.length);
-    // }
-
-    // const handleNext = () => {
-    //     setCurrentIndex(prevImg => (prevImg + 1) % imges.length);
-    // }
-
     useEffect(() => {
         const nextImg = setInterval(() => {
             setCurrentIndex(prevImg => (prevImg + 1) % imges.length);
@@ -51,8 +43,6 @@ const MyntraSlider = () => {
         <div className="myntra-slider-div">
             <Image src={imges[currentIndex].img} className="myntraSLider-img" />
             <div className="myntra-slider-btn-div">
-                {/* <Button onClick={handlePrev}>{"<"}</Button>
-                <Button onClick={handleNext}>{">"}</Button> */}
             </div>
         </div>
     )
