@@ -1,0 +1,12 @@
+.brands-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 60px;
+    justify-items: center;
+}
+.brand-card img {
+    width: 85%;
+    height: auto;
+    object-fit: cover;
+}
