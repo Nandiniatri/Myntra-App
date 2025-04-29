@@ -9,7 +9,7 @@ const Women = () => {
             <TopBrandGrid url='/data/shopData/Women/topBrandFile/TopBrand.json' />
             <CatagoryToBag url='/data/shopData/Women/catagoriesToBagFile/CatagoryTobag.json' title="Categories To Bag" />
             <CatagoryToBag url="/data/shopData/Women/exploreTopBrandsFile/ExploreTopBrands.json" title="Explore Top Brands" />
-            <CatagoryToBag url="/data/shopData/Women/myntraLuxe/MyntraLuxe.json" title="Myntra Luxe" />
+            <CatagoryToBag url="/data/shopData/Women/myntraLuxe/MyntraLuxe.json" title="Trending In Western Wear" />
             <CatagoryToBag url="/data/shopData/Women/trendingInIndianWear/TrendingInIndianWear.json" title="Trending In Indian Wear" />
             <CatagoryToBag url="/data/shopData/Women/trendingInSportsWear/TrendingInSportsWear.json" title="Trending In Sports Wear" />
             <CatagoryToBag url="/data/shopData/Women/trendingInFootwear/TrendingInFootwear.json" title="Trending In Footwear" />
