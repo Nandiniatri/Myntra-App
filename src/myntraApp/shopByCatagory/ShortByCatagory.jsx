@@ -3,19 +3,15 @@ import { AllDataContext } from "../../contextApi/AllDataContextApi";
 import Image from "../../components/Image";
 import './shopByCatagory.css';
 import useTextBanner from "../../customHook/useTextBanner";
+import TextBanner from "../../resuableComp/textbanner/TextBanner";
 
 const ShopByCatagory = () => {
     const { shopByCatagory } = useContext(AllDataContext);
-    const { textData } = useTextBanner('/data/textBannerFile/shopByCataText.json');
 
     return (
         <div className="shopByCategory-main-container">
             <div className="rising-star-text">
-                {textData.map((item) => (
-                    <div key={item.id}>
-                        <h4 className="rising-text-h4">{item.title}</h4>
-                    </div>
-                ))}
+                <TextBanner url="/data/textBannerFile/shopByCataText.json" />
             </div>
 
             <div className="shopByCategory-image-div">

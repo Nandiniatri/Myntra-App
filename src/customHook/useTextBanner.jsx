@@ -16,4 +16,4 @@ const useTextBanner = (url) => {
     return { textData }
 }
 
-export default useTextBanner;
+export default useTextBanner; 
