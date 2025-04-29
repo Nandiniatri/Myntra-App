@@ -11,9 +11,9 @@ const Men = () => {
             <CatagoryToBag url="/data/shopData/Men/exploreTopBrandsFile/ExploreTopBrands.json" />
             <CatagoryToBag url="/data/shopData/Men/myntraLuxe/MyntraLuxe.json" />
             <CatagoryToBag url="/data/shopData/Men/trendingInIndianWear/TrendingInIndianWear.json" />
-            <CatagoryToBag url="" />
-            <CatagoryToBag url="" />
-            <CatagoryToBag url="" />
+            <CatagoryToBag url="/data/shopData/Men/trendingInSportsWear/TrendingInSportsWear.json" />
+            <CatagoryToBag url="/data/shopData/Men/trendingInFootwear/TrendingInFootwear.json" />
+            <CatagoryToBag url="/data/shopData/Men/trendingInAccessories/TrendingInAccessories.json" />
         </div>
     )
 }

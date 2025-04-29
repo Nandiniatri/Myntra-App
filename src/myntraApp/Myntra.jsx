@@ -24,12 +24,13 @@ const Myntra = () => {
                             <LuxeGrand />
                             <MedalWorthy />
                             <ShopByCatagory />
-                            <Footer />
+                            {/* <Footer /> */}
                         </>
                     }
                 />
                 <Route path="/shop/men" element={<Men />} />
             </Routes>
+            <Footer />
         </BrowserRouter>
     );
 };
