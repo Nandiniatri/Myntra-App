@@ -25,7 +25,7 @@ const Header = () => {
                 <div className="header-logo-main-container">
                     {logo.map((headerLogo) => {
                         return (
-                            <Link to="/">
+                            <Link to="/" key={headerLogo.id}>
                                 <Image src={headerLogo.src} key={headerLogo.id} />
                             </Link>
                         );

@@ -1,0 +1,22 @@
+.kidSlider-btn-div {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.kidSlider-btn {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    cursor: pointer;
+    padding: 0;
+    outline: none;
+}
+
+
+.kidSlider-btn.btn {
+    background-color: gray;
+}

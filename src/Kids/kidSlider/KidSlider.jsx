@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import Image from "../../components/Image";
+import Button from "../../components/Button";
+import "./KidSlider.css";
 
 const KidSlider = () => {
     const [kidSlider, setKidSlider] = useState([]);
@@ -18,16 +20,37 @@ const KidSlider = () => {
     useEffect(() => {
         const nextImg = setInterval(() => {
             setCurrentIndex(prevImg => (prevImg + 1) % kidSlider.length);
-        }, 3000)
+        }, 4000)
 
         return () => clearInterval(nextImg);
     }, [kidSlider.length])
 
+    const handleButton = (id, index) => {
+        setCurrentIndex(index);
+    }
+
+
     return (
         <div className="myntra-slider-div">
-            {kidSlider.length > 0 && (
-                <Image src={kidSlider[currentIndex].img} className="myntraSLider-img" />
-            )}
+            <div>
+                {kidSlider.length > 0 && (
+                    <>
+                        <div>
+                            <Image src={kidSlider[currentIndex].img} className="myntraSLider-img" />
+                        </div>
+
+                        <div className="kidSlider-btn-div">
+                            {kidSlider.map((item, index) => {
+                                return (
+                                    <div>
+                                        <Button onClick={() => handleButton(item.id, index)} className={`kidSlider-btn ${currentIndex === index ? 'btn' : ''}`}></Button>
+                                    </div>
+                                )
+                            })}
+                        </div>
+                    </>
+                )}
+            </div>
         </div>
     )
 }
