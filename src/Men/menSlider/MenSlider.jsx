@@ -25,7 +25,7 @@ const imges = [
     }
 ]
 
-
+ 
 const MenSlider = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
 

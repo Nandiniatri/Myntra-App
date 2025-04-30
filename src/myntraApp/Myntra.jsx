@@ -1,3 +1,4 @@
+import Kids from "../Kids/Kids";
 import Men from "../Men/men";
 import Women from "../Women/Women";
 import Footer from "./footer/Footer";
@@ -31,6 +32,7 @@ const Myntra = () => {
                 />
                 <Route path="/shop/men" element={<Men />} />
                 <Route path="/shop/women" element={<Women />} />
+                <Route path="/shop/kids" element={<Kids />} />
             </Routes>
             <Footer />
         </BrowserRouter>
