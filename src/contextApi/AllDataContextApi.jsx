@@ -10,7 +10,15 @@ const AllDataContextProvider = ({ children }) => {
     const [isHover, setIsHover] = useState(null);
     const [kidTopPicks , setKidTopPicks] = useState([]);
     const [kidFashionAndEss , setKidFashionAndEss] = useState([]);
+    const [exploreMore , setExploreMore] = useState([]);
 
+    const fetchKidExploreMoreKid = async() => {
+        const response = await fetch('/data/shopData/Kids/exploreMore/ExploreMore.json');
+        const result = await response.json();
+        setExploreMore(result);
+    }
+    
+    //kid fashion and Ess
     const fetchKidFashionAndEss = async() => {
         const response = await fetch('/data/shopData/Kids/fashion&Essentials/Fashion&Essentials.json');
         const result = await response.json();
@@ -59,6 +67,7 @@ const AllDataContextProvider = ({ children }) => {
         fetchShopByCatagoryApi();
         fetchKidTopPicksApi();
         fetchKidFashionAndEss();
+        fetchKidExploreMoreKid();
     }, [])
 
     return (
@@ -69,7 +78,8 @@ const AllDataContextProvider = ({ children }) => {
             shopByCatagory,
             isHover, setIsHover,
             kidTopPicks,
-            kidFashionAndEss
+            kidFashionAndEss,
+            exploreMore
         }}>
             {children}
         </AllDataContext.Provider>

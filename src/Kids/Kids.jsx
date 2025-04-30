@@ -1,4 +1,5 @@
 import CatagoryToBag from "../resuableComp/categoriesToBag/CategoriesToBag";
+import ExploreMoreKid from "./exploreMore/ExploreMoreKid";
 import FashionAndEss from "./fashion&Ess/Fashion&Ess";
 import KidSlider from "./kidSlider/KidSlider";
 import TopPicks from "./topPicks/TopPicks";
@@ -11,6 +12,7 @@ const Kids = () => {
             <TopPicks />
             <CatagoryToBag url="/data/shopData/Kids/iconicBrands/IconicBrands.json" title="ICONIC BRANDS" />
             <FashionAndEss />
+            <ExploreMoreKid />
         </div>
     )
 }
