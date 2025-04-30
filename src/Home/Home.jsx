@@ -8,6 +8,20 @@ const Home = () => {
     const [homeCategory, setHomeCategory] = useState([]);
     const [getInspBanner1, setgetInspBanner1] = useState([]);
     const [trendHome, setTrendHome] = useState([]);
+    const [featureBrandBanner1 , setFeatureBrandBanner1] = useState([]);
+    const [featureImg , setFeatureImg] = useState([]);
+
+    const fetchfeatureImg1Api = async () => {
+        const response = await fetch('/data/shopData/Home/featureImg.json');
+        const result = await response.json();
+        setFeatureImg(result);
+    }
+
+    const fetchfeatureBrandBanner1Api = async () => {
+        const response = await fetch('/data/shopData/Home/featureBrandBanner1.json');
+        const result = await response.json();
+        setFeatureBrandBanner1(result);
+    }
 
     const fetchTrendApi = async () => {
         const response = await fetch('/data/shopData/Home/trend.json');
@@ -45,6 +59,8 @@ const Home = () => {
         fetchHomeCategoryApi();
         fetchGetInspiredBanner1Api();
         fetchTrendApi();
+        fetchfeatureBrandBanner1Api();
+        fetchfeatureImg1Api();
     }, []);
 
     return (
@@ -61,7 +77,6 @@ const Home = () => {
                 <h4 className="rising-text-h4">NICE TO SEE YOU, COME ON IN!</h4>
 
                 <div className="nice-to-See-inner-DIv">
-                    {/* Left Image Grid */}
                     <div className="nice-to-see-grid">
                         {niceToSee.map((seeItm, index) => (
                             <div key={index} className="grid-item">
@@ -71,7 +86,6 @@ const Home = () => {
                         ))}
                     </div>
 
-                    {/* Right Category List */}
                     <div className="nice-to-see-list">
                         <span>Furnishings & Bed Linen</span>
                         {homeCategory.map((cat) => (
@@ -99,6 +113,30 @@ const Home = () => {
                         </div>
                     ))}
                 </div>
+            </div>
+
+
+            <div className="feature-main-container">
+                <div className="feature-div1">
+                    {featureBrandBanner1.map((fea) => {
+                        return (
+                            <div className="feature-div1-inner">
+                                <Image src={fea.image}/>
+                            </div>
+                        )
+                    })}
+                </div>
+
+                <div className="feature-div2">
+                    {featureImg.map((fecImg) => {
+                           return (
+                            <div className="feature-div2-inner">
+                                <Image src={fecImg.image}/>
+                            </div>
+                        )
+                    })}
+                </div>
+
             </div>
 
         </div>
