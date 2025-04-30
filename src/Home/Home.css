@@ -22,7 +22,6 @@
     margin-top: 50px;
     width: 90%;
     max-width: 1200px;
-    /* border: solid; */
 }
 
 .nice-to-see-container .rising-text-h4 {
@@ -41,7 +40,6 @@
     padding: 20px;
 }
 
-
 .nice-to-see-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -54,12 +52,18 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    overflow: hidden;
 }
 
 .nice-to-see-image {
     width: 100%;
     height: auto;
     object-fit: cover;
+    transition: transform 0.4s ease, box-shadow 0.3s ease;
+}
+
+.grid-item:hover .nice-to-see-image {
+    transform: scale(1.05);
 }
 
 .grid-title {
@@ -68,7 +72,6 @@
     font-weight: 600;
     color: #3e4152;
 }
-
 
 .nice-to-see-list {
     width: 30%;
@@ -87,4 +90,63 @@
 
 .list-item a:hover {
     text-decoration: underline;
+    color: #111;
+}
+
+
+.get-inspired-main-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 60px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f2efef;
+}
+
+.get-inspired-banner img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 40px;
+}
+
+.trend-title {
+    text-align: center;
+    color: #3e4152;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-transform: capitalize;
+}
+
+.trend-title span {
+    font-weight: 500;
+    display: block;
+    font-size: 1.2rem;
+    margin-top: 5px;
+}
+
+.trend-home-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.trend-card {
+    flex: 1 1 calc(33.333% - 20px);
+    text-align: center;
+    cursor: pointer;
+}
+
+.trend-card-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.4s ease, box-shadow 0.3s ease;
+}
+
+.trend-card:hover .trend-card-img {
+    transform: scale(1.05);
 }

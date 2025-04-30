@@ -6,6 +6,20 @@ const Home = () => {
     const [homeLivingBanner, setHomeLivingBanner] = useState([]);
     const [niceToSee, setNiceToSee] = useState([]);
     const [homeCategory, setHomeCategory] = useState([]);
+    const [getInspBanner1, setgetInspBanner1] = useState([]);
+    const [trendHome, setTrendHome] = useState([]);
+
+    const fetchTrendApi = async () => {
+        const response = await fetch('/data/shopData/Home/trend.json');
+        const result = await response.json();
+        setTrendHome(result);
+    }
+
+    const fetchGetInspiredBanner1Api = async () => {
+        const response = await fetch('/data/shopData/Home/getInspiredBanner1.json');
+        const result = await response.json();
+        setgetInspBanner1(result);
+    }
 
     const fetchHomeCategoryApi = async () => {
         const response = await fetch('/data/shopData/Home/homeCategories.json');
@@ -29,6 +43,8 @@ const Home = () => {
         fetchHomeLivingBannerApi();
         fetchNiceToSeeApi();
         fetchHomeCategoryApi();
+        fetchGetInspiredBanner1Api();
+        fetchTrendApi();
     }, []);
 
     return (
@@ -68,14 +84,23 @@ const Home = () => {
             </div>
 
             <div className="get-inspired-main-container">
-                <div>
+                {getInspBanner1.map((ban1) => (
+                    <div key={ban1.id} className="get-inspired-banner">
+                        <Image src={ban1.image} />
+                    </div>
+                ))}
 
-                </div>
-
-                <div>
-                    
+                <div className="trend-home-grid">
+                    {trendHome.map((trnd) => (
+                        <div key={trnd.id} className="trend-card">
+                            <Image src={trnd.image} className="trend-card-img" />
+                            <div className="trend-card-title">{trnd.title}</div>
+                            <div className="trend-card-subtitle">{trnd.subtitle}</div>
+                        </div>
+                    ))}
                 </div>
             </div>
+
         </div>
     );
 };
