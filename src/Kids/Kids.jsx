@@ -13,6 +13,7 @@ const Kids = () => {
             <CatagoryToBag url="/data/shopData/Kids/iconicBrands/IconicBrands.json" title="ICONIC BRANDS" />
             <FashionAndEss />
             <ExploreMoreKid />
+            <CatagoryToBag url="/data/shopData/Kids/shopMoreBrands/ShopMoreBrands.json" title="SHOP MORE BRANDS" />
         </div>
     )
 }
