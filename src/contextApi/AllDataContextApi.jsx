@@ -8,6 +8,21 @@ const AllDataContextProvider = ({ children }) => {
     const [myntraSlider, setMyntraSlider] = useState([]);
     const [shopByCatagory, setShopByCatagory] = useState([]);
     const [isHover, setIsHover] = useState(null);
+    const [kidTopPicks , setKidTopPicks] = useState([]);
+    const [kidFashionAndEss , setKidFashionAndEss] = useState([]);
+
+    const fetchKidFashionAndEss = async() => {
+        const response = await fetch('/data/shopData/Kids/fashion&Essentials/Fashion&Essentials.json');
+        const result = await response.json();
+        setKidFashionAndEss(result);
+    }
+
+    //kid topPicks api
+    const fetchKidTopPicksApi = async() => {
+        const response = await fetch('/data/shopData/Kids/topPicks/TopPicks.json');
+        const result = await response.json();
+        setKidTopPicks(result);
+    }
 
     //this is shop by category data api
     const fetchShopByCatagoryApi = async () => {
@@ -42,6 +57,8 @@ const AllDataContextProvider = ({ children }) => {
         fetchApiForHeaderCenter();
         fetchMyntraSliderApi();
         fetchShopByCatagoryApi();
+        fetchKidTopPicksApi();
+        fetchKidFashionAndEss();
     }, [])
 
     return (
@@ -50,7 +67,9 @@ const AllDataContextProvider = ({ children }) => {
             headerCenterData,
             myntraSlider,
             shopByCatagory,
-            isHover, setIsHover
+            isHover, setIsHover,
+            kidTopPicks,
+            kidFashionAndEss
         }}>
             {children}
         </AllDataContext.Provider>

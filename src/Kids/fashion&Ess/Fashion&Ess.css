@@ -1,0 +1,10 @@
+.fashion-div2{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+}
+.fashion-div2 img{
+    width: 95%;
+}
+.fashion-main-container{
+    padding: 20px;
+}
